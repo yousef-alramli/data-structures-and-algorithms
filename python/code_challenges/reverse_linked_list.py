@@ -1,9 +1,8 @@
-def reverse_list(ll):
-    """Reverses a linked list
-    Args:
-        ll: linked list
-    Returns:
-        linked list in reversed form
-    """
+def reverseArray(revesed):
+
     # put your function implementation here
-    return ll
+    revesed.reverse.reverse()
+    return revesed
+
+example = [1, 2, 3, 4, 5, 6]
+reverseArray(example)
