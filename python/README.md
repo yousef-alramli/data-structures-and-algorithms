@@ -1,11 +1,12 @@
-# Reverse an Array
-this challenge is about reversing the order of lists characters
+# Data structure and algo repo
+## table of content
+1. code challenge-1 Reverse an Array:
+[Reverse an Array](./code-challenge01/README.md)
 
-## Whiteboard Process
-![](./array-reversy.png)
+2. code challenge-2  Insert to Middle of an Array [Insert to Middle of an Array](./code-challenge02/README.md)
 
-# Insert to Middle of an Array
-this challenge is about adding a character to the middle of array
+3. code challenge-2 array binary search:
+[array binary search](./code-challenge03/README.md)
 
-## Whiteboard Process
-![](./array-insert-shift.png)
+
+
