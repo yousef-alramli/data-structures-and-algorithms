@@ -5,8 +5,13 @@
 
 2. code challenge-2  Insert to Middle of an Array [Insert to Middle of an Array](./code-challenge02/README.md)
 
-3. code challenge-2 array binary search:
+3. code challenge-3 array binary search:
 [array binary search](./code-challenge03/README.md)
 
+5. code challenge-5 Linked List:
+[Linked List](./code-challenge05/README.md)
+
+5. code challenge-6 Linked List:
+[Linked List](./code-challenge06/README.md)
 
 
