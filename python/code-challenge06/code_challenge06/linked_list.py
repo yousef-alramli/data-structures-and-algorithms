@@ -28,7 +28,6 @@ class Linked_List:
             if current.next.value == value:
                 break 
             current = current.next
-        print(values_list)
         if value in values_list:
             node.next = current.next
             current.next = node
@@ -50,7 +49,6 @@ class Linked_List:
     def __str__(self):
         output = ""
         current = self.head
-        # print(current)
         while (current):
             output += f"{current.value} -> "
             current = current.next
@@ -69,4 +67,4 @@ if __name__=="__main__":
     lil.append_to_last(42)
     lil.append_before(5,5959595)
     lil.append_after("sd","dsdssddssd")
-    print(lil.__str__())
+    print(lil.__str__()[0])

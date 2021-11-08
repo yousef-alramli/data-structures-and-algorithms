@@ -14,4 +14,7 @@
 5. code challenge-6 Linked List:
 [Linked List](./code-challenge06/README.md)
 
+5. code challenge-7 linked-list-kth:
+[linked-list-kth](./code-challenge06/README.md)
+
 
