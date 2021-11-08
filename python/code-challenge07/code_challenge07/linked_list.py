@@ -9,7 +9,6 @@ class Linked_List:
     
     def append_to_last(self,value):
         node = Node(value)
-
         if self.head is None:
             self.head = node
         else:
@@ -17,34 +16,19 @@ class Linked_List:
             while current.next != None:
                 current = current.next
             current.next = node
-        
-    def append_before(self,value,new_value):
-        values_list =[]
-        node = Node(new_value)
-        current = self.head
-        while current.next is not None:
-            values_list.append(current.next.value)
-            values_list.append(current.value)
-            if current.next.value == value:
-                break 
-            current = current.next
-        if value in values_list:
-            node.next = current.next
-            current.next = node
 
-    def append_after(self,value,new_value):
-        values_list =[]
-        node = Node(new_value)
+
+    def kthFromEnd(self,k):
+        kth = []
         current = self.head
-        while current.next is not None:
-            values_list.append(current.next.value)
-            values_list.append(current.value)
-            if current.value == value:
-                break  
+        while (current):
+            kth.append(current.value)
             current = current.next
-        if value in values_list:
-            node.next = current.next
-            current.next = node
+        kth = kth[::-1]
+        if k >= len(kth) or k < 0:
+            return "Exception"
+        else:
+            return kth[k]
 
     def __str__(self):
         output = ""
@@ -65,6 +49,6 @@ if __name__=="__main__":
     lil.append_to_last("sdas")
     lil.append_to_last("val34322ue")
     lil.append_to_last(42)
-    lil.append_before(5,5959595)
-    lil.append_after("sd","dsdssddssd")
-    print(lil.__str__()[0])
+    x = lil.__str__().split(" -> ")
+    x.remove('Null')
+    print(lil.kthFromEnd(0))
