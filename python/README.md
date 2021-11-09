@@ -11,10 +11,13 @@
 5. code challenge-5 Linked List:
 [Linked List](./code-challenge05/README.md)
 
-5. code challenge-6 Linked List:
+6. code challenge-6 Linked List:
 [Linked List](./code-challenge06/README.md)
 
-5. code challenge-7 linked-list-kth:
-[linked-list-kth](./code-challenge06/README.md)
+7. code challenge-7 linked-list-kth:
+[linked-list-kth](./code-challenge07/README.md)
+
+8. code challenge-7 linked-list-zip:
+[linked-list-zip](./code-challenge08/README.md)
 
 
