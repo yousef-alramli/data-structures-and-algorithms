@@ -17,7 +17,10 @@
 7. code challenge-7 linked-list-kth:
 [linked-list-kth](./code-challenge07/README.md)
 
-8. code challenge-7 linked-list-zip:
+8. code challenge-8 linked-list-zip:
 [linked-list-zip](./code-challenge08/README.md)
+
+8. code challenge-10 stack-and-queue:
+[stack-and-queue](./code-challenge10/README.md)
 
 
