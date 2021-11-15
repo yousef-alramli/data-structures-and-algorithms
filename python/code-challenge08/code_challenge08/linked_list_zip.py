@@ -79,8 +79,8 @@ if __name__=="__main__":
     lil2.append("val34322ue")
     lil2.append(42)
 
-    print(lil1.__str__())
-    print(lil2.__str__())
+    # print(lil1.__str__())
+    # print(lil2.__str__())
     print("==================")
     print(zipLists(lil1, lil2))
 
