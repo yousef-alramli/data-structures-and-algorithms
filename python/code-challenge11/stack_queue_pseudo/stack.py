@@ -9,12 +9,15 @@ class Stack:
 
     def push(self,value):
         node = Node(value)
-        if self.top:
-            self.top.next = self.top
-        self.top = node
+        if self.top == None:
+            self.top = node
+        else:
+            node.next = self.top
+            self.top = node
+        
          
     def pop(self):
-        if self.top:
+        if self.top == None:
             raise Exception("sorry no elements")
         temp = self.top
         self.top = self.top.next
@@ -22,9 +25,11 @@ class Stack:
         return temp.value
     
     def peek(self):
-        if self.top:
+        if self.top == None:
             raise Exception("sorry no elements")
         return self.top.value
+    def is_empty(self):
+        return self.top == None
 
 
         

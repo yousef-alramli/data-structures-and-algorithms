@@ -1,4 +1,4 @@
-from stack_queue_pseudo.stack import Stack , Node
+from stack import Stack , Node
 
 
 class PseudoQueue:
@@ -8,11 +8,29 @@ class PseudoQueue:
 
     def enqueue(self , value):
         self.s1.push(value)
-    
+        
+           
+    def dequeue(self):
+        while not self.s1.is_empty():
+            self.s2.push(self.s1.pop())
         
 
-    def dequeue(self):
-        self.s1.pop(value)
+
+
+        return self.s2.pop()
+    
+
+if __name__ == "__main__":
+    queue = PseudoQueue()
+    queue.enqueue("value")
+    queue.enqueue("hello")
+    queue.enqueue("1234")
+    print(queue.dequeue())
+    print(queue.dequeue())
+    print(queue.dequeue())
+    
+
+
         
 
 
