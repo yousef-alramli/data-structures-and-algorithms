@@ -10,6 +10,9 @@ class BinaryTree:
         self.output = []
 
     def pre_order(self, root):
+        if root == None:
+            return self.output
+
         self.output.append(root.value)
         if root.left != None:
             self.pre_order(root.left)
@@ -20,6 +23,8 @@ class BinaryTree:
 
 
     def in_order(self,root):
+        if root == None:
+            return self.output
 
         if root.left is not None:
             self.in_order(root.left)
@@ -33,6 +38,9 @@ class BinaryTree:
         
 
     def post_order(self,root):
+        if root == None:
+            return self.output
+        
         if root.left is not None:
             self.post_order(root.left)
         
@@ -47,7 +55,7 @@ class BinaryTree:
 class BinarySearchTree(BinaryTree):
 
     def add(self,value):
-        pass
+        return 
 
     def contain(self,value):
         return self.output
@@ -62,7 +70,4 @@ if __name__ == "__main__":
     tree.root.left.left=Node("D")
     tree.root.left.right=Node("E")
     tree.root.right.left=Node("F")
-    print("pre :",tree.pre_order(tree.root))
-    print(BinarySearchTree().contain("B"))
-    # print("in :",tree.in_order(tree.root))
-    # print("post:",tree.post_order(tree.root))
+
