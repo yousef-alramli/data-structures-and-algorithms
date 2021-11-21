@@ -20,7 +20,23 @@
 8. code challenge-8 linked-list-zip:
 [linked-list-zip](./code-challenge08/README.md)
 
-8. code challenge-10 stack-and-queue:
+9. code challenge-10 stack-and-queue:
 [stack-and-queue](./code-challenge10/README.md)
+
+10. code challenge-11 stack_queue_pseudo:
+[stack_queue_pseudo](./code-challenge11/README.md)
+
+11. 
+
+12. code challenge-13 multi-bracket_validation:
+[multi-bracket_validation](./code-challenge13/README.md)
+
+13. 
+
+14. code challenge-15 trees:
+[trees](./code-challenge15/README.md)
+
+15. code challenge-16 tree max:
+[tree max](./code-challenge16/README.md)
 
 
