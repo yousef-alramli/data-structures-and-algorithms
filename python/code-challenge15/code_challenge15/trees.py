@@ -53,12 +53,50 @@ class BinaryTree:
 
 
 class BinarySearchTree(BinaryTree):
+    def __init__(self):
+        super().__init__()
 
     def add(self,value):
-        return 
+        node = Node(value)
+        if self.root == None:
+            self.root = node
+        
+        else:
+            temp = self.root
+            if temp.value < node.value:
+                while temp.right != None:
+                    temp = temp.right
+                temp.right = node
+
+            elif temp.value > node.value:
+                while temp.left != None:
+                    temp = temp.left
+                temp.left = node
+            
 
     def contain(self,value):
-        return self.output
+        
+        temp = self.root
+        if temp == None:
+            return False
+
+        if temp.value == value:
+            return True
+        
+        if temp.value < value:
+            while temp != None and temp.value < value:
+                temp = temp.right
+                if temp != None and temp.value == value:
+                    return True
+            return False
+        
+        if temp.value > value: 
+            while temp != None and temp.value > value:
+                temp = temp.left
+                if temp != None and temp.value == value:
+                    return True
+
+            return False
     
 
 
@@ -70,4 +108,14 @@ if __name__ == "__main__":
     tree.root.left.left=Node("D")
     tree.root.left.right=Node("E")
     tree.root.right.left=Node("F")
+    search_tree = BinarySearchTree()
+    search_tree.add(15)
+    search_tree.add(14)
+    search_tree.add(4)
+    search_tree.add(23)
+
+
+
+    # print(search_tree.root.left.value)
+    print(search_tree.contain(5) == False)
 

@@ -1,6 +1,6 @@
 from code_challenge15 import __version__
 
-from code_challenge15.trees import Node , BinaryTree
+from code_challenge15.trees import Node , BinaryTree , BinarySearchTree
 
 import pytest
 
@@ -44,6 +44,15 @@ def test_post_order(tree):
     actual = tree.post_order(tree.root)
     assert expected == actual
 
+def test_BTS_contain(BTS):
+    assert BTS.contain(5) == False
+    assert BTS.contain(23) == True
+
+def test_BTS_add(BTS):
+    assert BTS.root.left.value == 14
+    assert BTS.root.right.value == 23
+    assert BTS.root.value == 15
+
 
 @pytest.fixture
 def tree():
@@ -56,3 +65,13 @@ def tree():
     tree.root.left.right=Node("E")
     tree.root.right.left=Node("F")
     return tree
+
+@pytest.fixture
+def BTS():
+    search_tree = BinarySearchTree()
+    search_tree.add(15)
+    search_tree.add(14)
+    search_tree.add(4)
+    search_tree.add(23)
+    return search_tree
+
