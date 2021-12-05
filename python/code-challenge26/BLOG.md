@@ -1,0 +1,1 @@
+![](../assets/insertion_sort.png)
