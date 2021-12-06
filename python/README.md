@@ -39,4 +39,10 @@
 15. code challenge-16 tree max:
 [tree max](./code-challenge16/README.md)
 
+16. code challenge-26 insertion sort
+[insertion sort](./code-challenge26/README.md)
+
+17. code challenge-26 merge sort
+[merge sort](./code-challenge27/README.md)
+
 
