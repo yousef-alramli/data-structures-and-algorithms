@@ -39,3 +39,6 @@
 ## Whiteboard
 
 ![](../assets/merge_sort.png)
+
+## big -O
+O(n*log n)
