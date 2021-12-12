@@ -5,22 +5,20 @@ class HashTable:
     def __init__(self,size=1024):
         self.size = size
         self.map = [None]*size
-        self.key = [None]*size
 
     def add(self, key, value):
         hashed = self.hash(key)
 
 
         if not self.map[hashed]:
-            self.map[hashed] = value
-            self.key[hashed] = key
+            self.map[hashed] = [key ,value]
 
         else:
             if isinstance(self.map[hashed], LinkedList):
                 self.map[hashed].append([key,value])
             else:
                 chain = LinkedList()
-                existing_pair = [self.key[hashed],self.map[hashed]]
+                existing_pair = self.map[hashed]
                 new_pair = [key, value]
                 self.map[hashed] = chain
                 chain.append(existing_pair)
@@ -35,7 +33,7 @@ class HashTable:
     def contains(self,key):
         hashed = self.hash(key)
         try:
-            return key in self.key[hashed] or key in self.map[hashed].__str__()
+            return key in self.map[hashed].__str__()
         except:
             return False
         

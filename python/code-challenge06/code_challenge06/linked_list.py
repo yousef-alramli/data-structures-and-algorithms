@@ -67,4 +67,4 @@ if __name__=="__main__":
     lil.append_to_last(42)
     lil.append_before(5,5959595)
     lil.append_after("sd","dsdssddssd")
-    print(lil.__str__()[0])
+    print(lil.__str__())
