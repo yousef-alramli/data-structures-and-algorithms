@@ -117,5 +117,5 @@ if __name__ == "__main__":
 
 
     # print(search_tree.root.left.value)
-    print(search_tree.contain(5) == False)
+    print(search_tree.contain(5))
 
