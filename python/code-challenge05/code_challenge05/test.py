@@ -95,14 +95,95 @@ class LinkedList:
         output += "NONE"
         return output
 
-def reverse(ll):
-    current = ll.head
-    output = ''
-    while current.next != None:
-        output = f"{current.value} -> " + output
-        current = current.next
-    output += "NONE"
-    return output
+def delete_node(ll,n):
+    curr = ll.head
+    if curr.value == n:
+        ll.head = curr.next
+    # print("kofk;fsdds")
+    while curr.next:
+        # print(curr.next.value)
+        if curr.next.value == n:
+            print("in if ")
+            temp = curr
+            temp = curr.next
+            curr.next = temp.next
+            temp = None
+
+        if curr.next:
+            curr = curr.next
+
+    
+
+
+
+# def reverse(ll):
+#     first = ll.head
+#     curr = ll.head
+#     prev = None
+
+#     while curr:
+#         nex = curr.next
+#         curr.next = prev
+#         prev = curr
+#         curr = nex
+#     ll.head = prev
+#     second = ll.head
+#     while first.next:
+#         if first.value != second.value:
+#             print(False)
+#         print(first , second)
+#         first = first.next
+#         second = second.next 
+        
+
+
+# def reverse(ll):
+#     current = ll.head
+#     output = ''
+#     while current.next != None:
+#         output = f"{current.value} -> " + output
+#         current = current.next
+#     output += "NONE"
+#     return output
+
+def rotate(ll,k):
+    curr = ll.head
+    count = 1
+
+
+    while count < k and curr:
+        curr = curr.next
+        count += 1
+
+    if curr == None:
+        return
+
+    kthNode = curr
+
+    while curr.next:
+        curr=curr.next
+    curr.next = ll.head
+    ll.head = kthNode.next
+    kthNode.next = None
+    
+
+
+def middle(ll):
+    first = ll.head
+    
+    count = 0
+    while first:
+        count +=1
+        first = first.next
+    
+    count = count//2
+    count2 = 0
+    second = ll.head
+    # print(second.next.value , count)
+    while count2 < count:
+        count2 +=1
+        second = second.next
+    ll.head = second
 
 
 
@@ -111,14 +192,17 @@ if __name__ == "__main__":
     lil.add(1)
     lil.add(1)
 
-    lil.add(3)
-    lil.add(4)
-    lil.add(4)
+    lil.add(6)
+    # lil.add(4)
     lil.add(4)
     lil.add(6)
+    # lil.add(8)
     lil.add(8)
-    lil.add(8)
-    lil.odd_even()
+    # lil.odd_even()
     # lil.rmv_dublicate()
-    # lil.remove_nth(7)
     print(lil.__str__())
+
+    rotate(lil,2)
+    print(lil.__str__())
+
+    # lil.remove_nth(7)
