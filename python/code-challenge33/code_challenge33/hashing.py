@@ -1,4 +1,4 @@
-from code_challenge33.ll import Node , LinkedList
+from ll import Node , LinkedList
 
 
 class HashTable:
