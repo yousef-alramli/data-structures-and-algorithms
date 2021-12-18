@@ -1,3 +1,7 @@
+from trees import BinaryTree
+from trees import Node as treenode
+
+
 class Node:
     def __init__(self,value):
         self.value = value
@@ -187,22 +191,93 @@ def middle(ll):
 
 
 
-if __name__ == "__main__":
-    lil = LinkedList()
-    lil.add(1)
-    lil.add(1)
+# def printPaths(root):
 
-    lil.add(6)
+#     path = []
+#     getting_paths(root, path, 0)
+ 
+# # Helper function to print path from root
+# # to leaf in binary tree
+# def getting_paths(root, path, pathLen):
+     
+
+#     if root == None:
+#         return "empty list"
+ 
+#     # add current root's value into
+#     # path_ar list
+     
+#     # if length of list is gre
+#     if len(path) > pathLen:
+#         path[pathLen] = root.value
+#     else:
+#         path.append(root.value)
+ 
+#     # increment pathLen by 1
+#     pathLen = pathLen + 1
+ 
+#     if root.left is None and root.right is None:
+         
+#         # leaf node then print the list
+#         printArray(path, pathLen)
+#     else:
+#         # try for left and right subtree
+#         getting_paths(root.left, path, pathLen)
+#         getting_paths(root.right, path, pathLen)
+
+
+# # Helper function to print list in which
+# # root-to-leaf path is stored
+# def printArray(ints, len):
+#     for i in ints[0 : len]:
+#         print(i,"->",end="")
+#     print()
+
+def sum_left(root,summing = 0):
+
+    
+    if root.left:
+        print("sum is: ",summing)
+        summing += root.left.value
+        summing =sum_left(root.left, summing)
+        print("second sum is: ",summing)
+
+
+    if root.right:
+        print("right sum is: ",summing)
+        summing =sum_left(root.right, summing)
+
+    return summing
+
+
+if __name__ == "__main__":
+    tree = BinaryTree()
+    # tree.root=treenode("A")
+    # tree.root.left=treenode("B")
+    # tree.root.left.left=treenode("D")
+    # tree.root.left.right=treenode("E")
+    # tree.root.right=treenode("C")
+    # tree.root.right.left=treenode("F")
+    tree.root=treenode(1)
+    tree.root.left=treenode(11)
+    tree.root.left.left=treenode(3)
+    tree.root.left.right=treenode(4)
+    tree.root.right=treenode(5)
+    tree.root.right.left=treenode(6)
+    print(sum_left(tree.root))
+    # lil = LinkedList()
+    # lil.add(1)
+    # lil.add(1)
+    # lil.add(6)
     # lil.add(4)
-    lil.add(4)
-    lil.add(6)
+    # lil.add(4)
+    # lil.add(6)
     # lil.add(8)
-    lil.add(8)
+    # lil.add(8)
     # lil.odd_even()
     # lil.rmv_dublicate()
-    print(lil.__str__())
-
-    rotate(lil,2)
-    print(lil.__str__())
-
+    # print(lil.__str__())
+    # rotate(lil,2)
+    # print(lil.__str__())
     # lil.remove_nth(7)
+
