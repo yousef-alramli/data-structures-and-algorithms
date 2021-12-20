@@ -237,14 +237,13 @@ def sum_left(root,summing = 0):
 
     
     if root.left:
-        print("sum is: ",summing)
+
         summing += root.left.value
         summing =sum_left(root.left, summing)
-        print("second sum is: ",summing)
+
 
 
     if root.right:
-        print("right sum is: ",summing)
         summing =sum_left(root.right, summing)
 
     return summing
@@ -258,12 +257,14 @@ if __name__ == "__main__":
     # tree.root.left.right=treenode("E")
     # tree.root.right=treenode("C")
     # tree.root.right.left=treenode("F")
+    
+# [1,2,3,4,5]
     tree.root=treenode(1)
-    tree.root.left=treenode(11)
-    tree.root.left.left=treenode(3)
-    tree.root.left.right=treenode(4)
-    tree.root.right=treenode(5)
-    tree.root.right.left=treenode(6)
+    tree.root.left=treenode(2)
+    tree.root.left.left=treenode(4)
+    tree.root.left.right=treenode(5)
+    tree.root.right=treenode(3)
+    # tree.root.right.left=treenode(6)
     print(sum_left(tree.root))
     # lil = LinkedList()
     # lil.add(1)
