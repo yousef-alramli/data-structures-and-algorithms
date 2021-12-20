@@ -16,15 +16,15 @@ class TreeNode:
         self.right = right
 
 def binaryTreePaths(root):
-    def dfs(root):
+    def dfs(root, output = ''):
         if not root:
             return "empty list"
         if not root.left and not root.right:
-            tmp.append(str(root.val))
+            tmp.append(f"{root.val}")
             res.append("->".join(tmp))
             tmp.pop()
             return
-        tmp.append(str(root.val))
+        tmp.append(f"{root.val}")
         dfs(root.left)
         dfs(root.right)
         tmp.pop()
@@ -35,22 +35,22 @@ def binaryTreePaths(root):
 
 if __name__ == "__main__":
 
-    # tree1 = TreeNode(4)
-
-    # tree1.left = TreeNode(2)
-    # tree1.right = TreeNode(7)
-
-    # tree1.left.left = TreeNode(1)
-    # tree1.left.right = TreeNode(3)
-
-    # tree1.right.left = TreeNode(6)
-    # tree1.right.right = TreeNode(9)
-
-    tree1 = TreeNode(1)
+    tree1 = TreeNode(4)
 
     tree1.left = TreeNode(2)
-    tree1.right = TreeNode(3)
+    tree1.right = TreeNode(7)
 
-    tree1.left.right = TreeNode(5)
+    tree1.left.left = TreeNode(1)
+    tree1.left.right = TreeNode(3)
+
+    tree1.right.left = TreeNode(6)
+    tree1.right.right = TreeNode(9)
+
+    # tree1 = TreeNode(1)
+
+    # tree1.left = TreeNode(2)
+    # tree1.right = TreeNode(3)
+
+    # tree1.left.right = TreeNode(5)
 
     print(binaryTreePaths(tree1))
